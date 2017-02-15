@@ -1,4 +1,6 @@
 # redux-request-state
+![Build status](https://travis-ci.org/gustavohenke/redux-request-state.svg?branch=master)
+
 Redux utilities to deal with HTTP request states (loading, succeeded, failed).
 
 Install with npm:
