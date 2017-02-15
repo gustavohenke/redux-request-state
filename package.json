@@ -1,0 +1,18 @@
+{
+  "name": "redux-request-state",
+  "version": "1.0.0",
+  "description": "Redux utilities to deal with HTTP request states (loading, succeeded, failed).",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests/*.js"
+  },
+  "repository": "gustavohenke/redux-request-state",
+  "keywords": [
+    "redux"
+  ],
+  "author": "Gustavo Henke",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}
