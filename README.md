@@ -1,5 +1,5 @@
 # redux-request-state
-![Build status](https://travis-ci.org/gustavohenke/redux-request-state.svg?branch=master)
+[![Build status](https://travis-ci.org/gustavohenke/redux-request-state.svg?branch=master)](https://travis-ci.org/gustavohenke/redux-request-state)
 
 Redux utilities to deal with HTTP request states (loading, succeeded, failed).
 
