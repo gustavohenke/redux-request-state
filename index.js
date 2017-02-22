@@ -1,4 +1,7 @@
+const selectors = require( "./selectors" );
+
 module.exports = exports = {};
+exports.selectors = selectors;
 exports.createRequestReducer = function ( actions ) {
     return function ( state, action ) {
         switch ( action.type ) {

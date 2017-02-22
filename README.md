@@ -92,5 +92,34 @@ Parameters:
   - `getData`: name of the selector to query the request result
   - `getError`: name of the selector to query the request error
 
+### `selectors`
+It's an object which contains the following selector functions:
+
+- `isLoading`: queries the loading state
+- `getData`: queries the request result
+- `getError`: queries the request error
+
+They all work by returning the corresponding key in the given state object.  
+If given a function, it will be used to select the base state where the reducer data lies.
+
+These selectors are available also from `redux-request-state/selectors`.
+
+```js
+import { getData } from "redux-request-state/selectors";
+
+const data = getData( state.accounts );
+
+// Same as above
+const data = getData( state => state.accounts )( state );
+
+// Function composition!
+const accountsNumber = compose( state => state.accounts, getData, accounts => accounts.length );
+
+// Perhaps you like reselect? https://github.com/reactjs/reselect
+const baseAccountsSelector = state => state.accounts;
+const listAccounts = createSelector( baseAccountsSelector, getData );
+const accountsNumber = createSelector( listAccounts, accounts => accounts.length );
+```
+
 ## License
 MIT
