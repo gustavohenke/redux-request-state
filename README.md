@@ -80,6 +80,10 @@ Parameters:
     and saves the payload as the `error` key of the state.
 
 ### `createRequestSelectors( baseStateSelector, selectorNames )`
+> *DEPRECATED*  
+> This function is too verbose and doesn't blend well with ES6 modules.
+> It may be removed in the near future.
+
 Creates selector functions to query the state as stored by a reducer created with `createRequestReducer`.
 The returned object contains functions named after `selectorNames`, and they will query the
 corresponding piece of state.
