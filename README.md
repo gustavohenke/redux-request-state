@@ -48,11 +48,6 @@ export function accounts ( state = {}, action ) {
     }
 }
 
-// selectors for the above
-const isLoadingAccounts = state => state.accounts.loading;
-const listAccounts = state => state.accounts.data;
-const getAccountsError = state => state.accounts.error;
-
 const store = createStore( combineReducers({ accounts }) );
 ```
 
@@ -70,12 +65,6 @@ const store = createStore( combineReducers({
         failure: ACCOUNTS_REQUEST_FAILURE
     })
 }));
-
-const accountsSelectors = createRequestSelectors( state => state.accounts, {
-    isLoading: "isLoading",
-    getData: "listAccounts",
-    getError: "getAccountsError"
-});
 ```
 
 ## API
