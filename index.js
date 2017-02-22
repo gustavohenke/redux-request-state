@@ -30,17 +30,9 @@ exports.createRequestReducer = function ( actions ) {
 
 exports.createRequestSelectors = function ( baseStateSelector, selectorNames ) {
     var selectors = {};
-    selectors[ selectorNames.isLoading ] = function ( state ) {
-        return baseStateSelector( state ).loading;
-    };
-
-    selectors[ selectorNames.getData ] = function ( state ) {
-        return baseStateSelector( state ).data;
-    };
-
-    selectors[ selectorNames.getError ] = function ( state ) {
-        return baseStateSelector( state ).error;
-    };
+    selectors[ selectorNames.isLoading ] = exports.selectors.isLoading( baseStateSelector );
+    selectors[ selectorNames.getData ] = exports.selectors.getData( baseStateSelector );
+    selectors[ selectorNames.getError ] = exports.selectors.getError( baseStateSelector );
     
     return selectors;
 };
