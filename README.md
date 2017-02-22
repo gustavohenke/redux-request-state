@@ -3,15 +3,17 @@
 
 Redux utilities to deal with HTTP request states (loading, succeeded, failed).
 
+- [Installation](#installation)
+- [Motivation](#motivation)
+- [API](#api)
+- [License](#license)
+
+## Installation
 Install with npm:
 
 ```
 npm install redux-request-state
 ```
-
-- [Motivation](#motivation)
-- [API](#api)
-- [License](#license)
 
 ## Motivation
 In a big application, you may end up writing lots of reducers to deal with the three states of a
