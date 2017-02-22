@@ -26,7 +26,7 @@ exports.createRequestReducer = function ( actions ) {
 };
 
 exports.createRequestSelectors = function ( baseStateSelector, selectorNames ) {
-    const selectors = {};
+    var selectors = {};
     selectors[ selectorNames.isLoading ] = function ( state ) {
         return baseStateSelector( state ).loading;
     };
